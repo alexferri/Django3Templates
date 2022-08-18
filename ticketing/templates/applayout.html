@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Ticketing App - {% block title %} {% endblock %}</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/tickets">View Tickets</a>
+    <a href="/submit">New Ticket</a>
+  </nav>
+  <section class="content">
+    {% block content %} {% endblock %}
+  </section>
+</body>
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    display: flex;
+  }
+  a {
+    padding: 10px 20px;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    text-decoration: none;
+    transition: ease 0.2s all;
+  }
+  a:hover {
+    background: #444;
+  }
+  .content {
+    margin-top: 50px;
+  }
+</style>
+</html>

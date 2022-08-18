@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket {{ ticket.pk }}</title>
+</head>
+<body>
+  You are viewing a ticket submitted by {{ ticket.submitter }}:
+  <p>{{ ticket.body }}</p>
+  <a href="{% url 'home' %}">Go home</a>
+</body>
+</html>

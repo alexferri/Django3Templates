@@ -1,0 +1,25 @@
+{% extends 'applayout.html' %}
+
+{% block title %}
+{% load mytags %}
+    Tickets
+{% endblock %}
+
+{% block content %}
+    <div class="tickets">
+        {% for ticket in tickets  %}
+            <div class="ticket">
+                <h3>Ticket {{ticket.pk}}</h3>
+                <div class="info">
+                    Submitted by <strong>{{ticket.submitter}}</strong>
+                    on <strong>{{ticket.created_at|mydate:True}}</strong>
+<!--                    on <strong>{{ticket.created_at|date:"d, M, Y"}}</strong>-->
+<!--                    at <strong>{{ticket.created_at|time:"h:i"}}</strong>-->
+                </div>
+                <h4>Description:</h4>
+                <div class="body">{{ticket.body}}</div>
+                <a class="viewticket" href="{% url 'ticket' ticket.pk %}">View this ticket</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+body, input, texarea {
+    background: #444;
+}
+input, textarea {
+    color: white;
+    outline: none;
+    border: solid grey 1px;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.tickets {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ticket {
+    margin: 10px;
+    background: #555;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
+}
+
+.ticket > * {
+    padding: 0 20px;
+    color: white;
+}
+
+.ticket h4 {
+    margin: 20px 0 5px 0;
+}
+
+.ticket a {
+    color: white;
+    margin-top: 10px;
+    padding: 15px
+    display: block;
+    border-radius: 5px;
+    background: #616161;
+}
+
+.ticket a:hover {
+    background: #6a6a6a;
+}
